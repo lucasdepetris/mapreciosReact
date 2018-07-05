@@ -19,17 +19,13 @@ export default class Home extends Component{
     this.setState({productToSearch:pro})
   }
 
-  _handleProductSelected = (prod) => {
-    this.setState({productSelected:prod})
-  }
-
   render(){
     return (
       <div>
         <Header />
         <SectionIntroduction />
-        <SectionSearchProducts onResults={this._handleResults}/>
-        <ListProducts productToSearch={this.state.productToSearch} onResults={this._handleProductSelected}/>
+        <SectionSearchProducts />
+      
       </div>
     )
   }

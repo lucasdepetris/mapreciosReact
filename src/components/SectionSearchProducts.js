@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
 import InputUbicacion from './InputUbicacion'
+import ListProducts from './ListProducts'
 
 
 export default class SectionSearchProducts extends Component{
+
+  constructor(props) {
+    super(props);
+    this.lat= "";  // I declare the variable here
+    this.lng= "";
+    this.producto="";
+  }
+
   state = {
-    lat:'',
-    lng:'',
-    producto:'',
-    productos:[]
+    producto:{},
+    productToSearchExist:false
   }
 
   _handleUbicacion = (lat,lng) => {
-    this.setState({lat:lat,lng:lng})
-  }
-
-  _handleChange = (e) => {
-    this.setState({producto:e.target.value})
+    this.lat = lat;
+    this.lng = lng;
   }
 
   _handleSubmit = (e) => {
     e.preventDefault()
-    const {producto,lat,lng} = this.state
-    this.props.onResults(producto,lat,lng)
+    this.producto = e.target.Producto.value
+    console.log(this.lat,this.lng,this.producto)
+    this.setState({producto:{lat:this.lat,lng:this.lng,producto:this.producto},productToSearchExist:true})
   }
 
   render(){
+    console.log(this.state.producto)
     return(
     <div className = "Search-Products">
       <form onSubmit = {this._handleSubmit}>
@@ -35,15 +41,23 @@ export default class SectionSearchProducts extends Component{
             </div>
             <div className="field">
                 <div className="control">
-                    <input onChange={this._handleChange} className="input is-medium" type="text" placeholder="Buscar Productos"/>
+                    <input  
+                      className="input is-medium" 
+                      type="text" 
+                      placeholder="Buscar Productos"
+                      name="Producto"
+                      />
                 </div>
             </div>
             <button className="button is-info">Buscar</button>
       </form>
 
-      <div>
-
-      </div>
+      {this.state.productToSearchExist ?
+        <div>
+        <ListProducts productToSearch={this.state.producto}/>
+        </div>
+      : null
+      }
     </div>
     )
   }

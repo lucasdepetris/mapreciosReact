@@ -11,12 +11,14 @@ export default class Product extends Component{
 
   render(){
     const {id,marca,nombre} = this.props
-
     return(
       <div >
           <div className="card-content">
               <div className="media">
                   <div className="media-content">
+                    <figure className="image is-128x128">
+                    <img src={"https://imagenes.preciosclaros.gob.ar/productos/"+id+".jpg"} alt={nombre}/>
+                    </figure>
                     <p className="title is-4">{nombre}</p>
                     <p className="subtitle is-6">{marca}</p>
                     <p className="subtitle is-6">{id}</p>

@@ -1,41 +1,71 @@
 import React, { Component } from 'react';
 import Productos from '../mocks/productos.json'
+import ProductosDetalles from '../mocks/productoById.json'
 import Product from '../components/Product'
 
 
 export default class ListProducts extends Component{
+  constructor(props) {
+    super(props);
+    this.productoSelected = '';
+
+  }
+
   state = {
-    productos:[]
+    producto:{},
+    productos:[],
+    sucursales:[],
+    isLoading:true
+  }
+
+  componentDidMount(){
+    console.log('1. componentDidMount')
+    console.log(this.props.productToSearch)
+    this._getProductosByString(this.props.productToSearch)
+  }
+  _getProductosByString = (producto) => {
+    this.setState({productos:Productos.productos,isLoading:false})
   }
 
   _handleClickProduct = (prodId) => {
     console.log(prodId)
-    this.props.onResults(prodId)
+    this.productoSelected = prodId
+    this._getProductoDetallesById(prodId)
   }
 
-  _handleSubmit = (e) => {
-    
+  _getProductoDetallesById = (id) => {
+    this.setState({producto:ProductosDetalles.producto,sucursales:ProductosDetalles.sucursales})
   }
 
   render(){
-    console.log(this.props.productToSearch)
-    const productos = Productos.productos
+    const {productos,producto,sucursales} = this.state
+    
+    if(this.state.isLoading){
+      return <div>Loading..</div>
+    }
+
     return(
-          <div className = 'ProductList'>
-            {
-              productos.map(prod => {
-                return(
-                  <div 
-                    key = {prod.id} 
-                    className = 'ProductList-item' 
-                    onClick={() => this._handleClickProduct(prod.id)}>
+          <div>
+            <div className = 'ProductList'>
+              {
+                productos.map(prod => {
+                  return(
+                    <div 
+                      key = {prod.id} 
+                      className = 'ProductList-item' 
+                      onClick={() => this._handleClickProduct(prod.id)}>
 
-                     <Product id={prod.id} nombre={prod.nombre} marca = {prod.marca}/>
+                      <Product id={prod.id} nombre={prod.nombre} marca = {prod.marca}/>
 
-                  </div>
-                )
-              })
-            }
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div className="separador-Productos-DetalleProducto"></div>
+            <div>
+              Detalles Producto Y comercios
+            </div>
           </div>
     )
   }
