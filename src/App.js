@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
       <Switch>
-        <Route exact path = '/' />
+        <Route exact path = '/' component = {Home} />
         <Route component = {NotFound} />
       </Switch>
     </div>

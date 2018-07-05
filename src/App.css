@@ -1,4 +1,12 @@
 .App {
   text-align: center;
 }
+.Search-Products{
+  text-align: center;
+}
 
+.control{
+  width: 40%;
+  float: none;
+  margin: 0 auto;
+}
