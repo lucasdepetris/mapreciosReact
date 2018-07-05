@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import InputUbicacion from './InputUbicacion'
 
 
 export default class SectionSearchProducts extends Component{
@@ -9,6 +10,10 @@ export default class SectionSearchProducts extends Component{
     productos:[]
   }
 
+  _handleUbicacion = (lat,lng) => {
+    this.setState({lat:lat,lng:lng})
+  }
+
   _handleChange = (e) => {
     this.setState({producto:e.target.value})
   }
@@ -16,7 +21,7 @@ export default class SectionSearchProducts extends Component{
   _handleSubmit = (e) => {
     e.preventDefault()
     const {producto,lat,lng} = this.state
-    this.props.onResults(producto,2,lng)
+    this.props.onResults(producto,lat,lng)
   }
 
   render(){
@@ -25,7 +30,7 @@ export default class SectionSearchProducts extends Component{
       <form onSubmit = {this._handleSubmit}>
             <div className="field">
                 <div className="control">
-                    <input className="input is-medium" type="text" placeholder="Ingresa tu ubicacion.."/>
+                    <InputUbicacion onResults={this._handleUbicacion} />
                 </div>
             </div>
             <div className="field">
