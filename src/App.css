@@ -10,3 +10,26 @@
   float: none;
   margin: 0 auto;
 }
+
+.button{
+  width: 40%;
+  margin-bottom: 10%;
+}
+.ProductList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.ProductList-item{
+  transition: all 0.2s;
+  margin-bottom: 24px;
+  width: 25%;
+}
+
+.ProductList-item:hover{
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}

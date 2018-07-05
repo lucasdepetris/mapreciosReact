@@ -1,0 +1,294 @@
+{
+    "status": 200,
+    "total": 789,
+    "producto": {
+        "presentacion": "75.0 gr",
+        "nombre": "Snacks Galletitas Original en Tubo Rex 75 Gr",
+        "id": "7790040100336",
+        "marca": "BAGLEY"
+    },
+    "maxLimitPermitido": 50,
+    "totalPagina": 10,
+    "sucursales": [
+        {
+            "distanciaNumero": 0.7218,
+            "distanciaDescripcion": "0.72 kilómetros",
+            "banderaId": 1,
+            "actualizadoHoy": true,
+            "lat": "-34.664628",
+            "lng": "-58.597356",
+            "sucursalNombre": "San Justo",
+            "id": "12",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 21.9,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Av. Don Bosco 2680",
+            "banderaDescripcion": "Hipermercado Carrefour",
+            "localidad": "San Justo",
+            "comercioRazonSocial": "INC S.A.",
+            "comercioId": 10
+        },
+        {
+            "distanciaNumero": 3.1389,
+            "distanciaDescripcion": "3.14 kilómetros",
+            "banderaId": 1,
+            "actualizadoHoy": true,
+            "lat": "-34.638763",
+            "lng": "-58.581518",
+            "sucursalNombre": "Haedo",
+            "id": "43",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 21.9,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Dr. Luis Güemes 369",
+            "banderaDescripcion": "Hipermercado Carrefour",
+            "localidad": "Haedo",
+            "comercioRazonSocial": "INC S.A.",
+            "comercioId": 10
+        },
+        {
+            "distanciaNumero": 3.3057,
+            "distanciaDescripcion": "3.31 kilómetros",
+            "banderaId": 1,
+            "actualizadoHoy": true,
+            "lat": "-34.688893",
+            "lng": "-58.56632",
+            "sucursalNombre": "Sucursal San Justo",
+            "id": "4",
+            "sucursalTipo": "Mayorista",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": "",
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "J. M. De Rosas 4818",
+            "banderaDescripcion": "MAXICONSUMO",
+            "localidad": "San Justo",
+            "comercioRazonSocial": "MAXICONSUMO",
+            "comercioId": 63
+        },
+        {
+            "distanciaNumero": 3.3609,
+            "distanciaDescripcion": "3.36 kilómetros",
+            "banderaId": 2,
+            "actualizadoHoy": true,
+            "lat": "-34.6537",
+            "lng": "-58.6231",
+            "sucursalNombre": "Morón II.",
+            "id": "154",
+            "sucursalTipo": "Supermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 23.99,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Garcia Silva Intendente 855",
+            "banderaDescripcion": "Disco",
+            "localidad": "MORON",
+            "comercioRazonSocial": "Jumbo Retail Argentina S.A.",
+            "comercioId": 9
+        },
+        {
+            "distanciaNumero": 3.6116,
+            "distanciaDescripcion": "3.61 kilómetros",
+            "banderaId": 5,
+            "actualizadoHoy": true,
+            "lat": "-34.685278",
+            "lng": "-58.557778",
+            "sucursalNombre": "San Justo",
+            "id": "2998",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 22,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Brig Gral J M Rosas 3990",
+            "banderaDescripcion": "Walmart SuperCenter",
+            "localidad": "SAN JUSTO",
+            "comercioRazonSocial": "Wal Mart Argentina S.R.L.",
+            "comercioId": 11
+        },
+        {
+            "distanciaNumero": 3.8049,
+            "distanciaDescripcion": "3.80 kilómetros",
+            "banderaId": 1,
+            "actualizadoHoy": true,
+            "lat": "-34.6502131",
+            "lng": "-58.6264209",
+            "sucursalNombre": "MORON ",
+            "id": "215",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 22.09,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "LLEVANDO ESTE ARTICULO 15% DE DTO CON TARJ. CLUB LA NACION CON TARJETAS  EN LINEA DE CAJAS*  - DEL 04/07/2018 AL 04/07/2018 O HASTA AGOTAR STOCK  DE 9900 UNI",
+                    "precio": 18.78
+                }
+            },
+            "direccion": "Gral. Juan Jose Valle 51",
+            "banderaDescripcion": "COTO CICSA",
+            "localidad": "Moron",
+            "comercioRazonSocial": "Coto Centro Integral de Comercialización S.A.",
+            "comercioId": 12
+        },
+        {
+            "distanciaNumero": 3.8121,
+            "distanciaDescripcion": "3.81 kilómetros",
+            "banderaId": 1,
+            "actualizadoHoy": true,
+            "lat": "-34.680935",
+            "lng": "-58.552142",
+            "sucursalNombre": "san justo",
+            "id": "9",
+            "sucursalTipo": "Mayorista",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": "",
+                "promo1": {
+                    "descripcion": "DESC X VOL GALLE REX TUBO X75 GR",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Avenida Juan M. De Rosas 3280",
+            "banderaDescripcion": "HIPERMAYORISTA MAKRO",
+            "localidad": "san justo",
+            "comercioRazonSocial": "MAKRO",
+            "comercioId": 61
+        },
+        {
+            "distanciaNumero": 3.8552,
+            "distanciaDescripcion": "3.86 kilómetros",
+            "banderaId": 1,
+            "actualizadoHoy": true,
+            "lat": "-34.6402654",
+            "lng": "-58.5617807",
+            "sucursalNombre": "RAMOS MEJIA ",
+            "id": "51",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 22.09,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "LLEVANDO ESTE ARTICULO 15% DE DTO CON TARJ. CLUB LA NACION CON TARJETAS  EN LINEA DE CAJAS*  - DEL 04/07/2018 AL 04/07/2018 O HASTA AGOTAR STOCK  DE 9900 UNI",
+                    "precio": 18.78
+                }
+            },
+            "direccion": "Av. Rivadavia 13810",
+            "banderaDescripcion": "COTO CICSA",
+            "localidad": "Ramos Mejia",
+            "comercioRazonSocial": "Coto Centro Integral de Comercialización S.A.",
+            "comercioId": 12
+        },
+        {
+            "distanciaNumero": 4.146,
+            "distanciaDescripcion": "4.15 kilómetros",
+            "banderaId": 2,
+            "actualizadoHoy": true,
+            "lat": "-34.688988",
+            "lng": "-58.625595",
+            "sucursalNombre": "Morón",
+            "id": "1116",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 22,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Av. Don Bosco 5635",
+            "banderaDescripcion": "Changomas",
+            "localidad": "MORON",
+            "comercioRazonSocial": "Wal Mart Argentina S.R.L.",
+            "comercioId": 11
+        },
+        {
+            "distanciaNumero": 5.0584,
+            "distanciaDescripcion": "5.06 kilómetros",
+            "banderaId": 3,
+            "actualizadoHoy": true,
+            "lat": "-34.6338",
+            "lng": "-58.6285",
+            "sucursalNombre": "Jumbo Morón",
+            "id": "5208",
+            "sucursalTipo": "Hipermercado",
+            "provincia": "AR-B",
+            "preciosProducto": {
+                "precioLista": 23.99,
+                "promo1": {
+                    "descripcion": "",
+                    "precio": ""
+                },
+                "promo2": {
+                    "descripcion": "",
+                    "precio": ""
+                }
+            },
+            "direccion": "Boulevard Rosas Juan Manuel De 658",
+            "banderaDescripcion": "Jumbo",
+            "localidad": "CASTELAR",
+            "comercioRazonSocial": "Jumbo Retail Argentina S.A.",
+            "comercioId": 9
+        }
+    ]
+}

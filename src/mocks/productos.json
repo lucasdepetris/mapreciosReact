@@ -1,0 +1,99 @@
+{
+    "status": 200,
+    "total": 57,
+    "maxLimitPermitido": 100,
+    "maxCantSucursalesPermitido": 50,
+    "productos": [
+        {
+            "marca": "COCA COLA",
+            "id": "7790895007132",
+            "precioMax": 235,
+            "precioMin": 233.5,
+            "nombre": "Coca Cola + Sprite 2.25 Lt Pack 4 Un",
+            "presentacion": "4.0 un",
+            "cantSucursalesDisponible": 2
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895001413",
+            "precioMax": 22.89,
+            "precioMin": 22.89,
+            "nombre": "Coca Cola 1 Lt",
+            "presentacion": "1.0 lt",
+            "cantSucursalesDisponible": 6
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895000430",
+            "precioMax": 64,
+            "precioMin": 42.99,
+            "nombre": "Coca Cola 1.5 Lt",
+            "presentacion": "1.5 lt",
+            "cantSucursalesDisponible": 15
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895001505",
+            "precioMax": 54.75,
+            "precioMin": 54.75,
+            "nombre": "Coca Cola 1.5 Lt Pack 4 Un",
+            "presentacion": "1.5 lt",
+            "cantSucursalesDisponible": 5
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895007217",
+            "precioMax": 55,
+            "precioMin": 47.99,
+            "nombre": "Coca Cola 1.75 Lt",
+            "presentacion": "1.75 lt",
+            "cantSucursalesDisponible": 14
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895000010",
+            "precioMax": null,
+            "precioMin": null,
+            "nombre": "Coca Cola 2 Lt",
+            "presentacion": "2.0 lt",
+            "cantSucursalesDisponible": 0
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895005466",
+            "precioMax": 124,
+            "precioMin": 124,
+            "nombre": "Coca Cola 2.25 Lt y Gaseosa Lima Limon Sprite 2.25 Lt",
+            "presentacion": "4.5 lt",
+            "cantSucursalesDisponible": 1
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895007057",
+            "precioMax": 124,
+            "precioMin": 116.7,
+            "nombre": "Coca Cola 2.25 Lt y Gaseosa Lima Limon Sprite 2.25 Lt",
+            "presentacion": "5.0 lt",
+            "cantSucursalesDisponible": 3
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895005794",
+            "precioMax": 69,
+            "precioMin": 69,
+            "nombre": "Coca Cola 2.5 Lt",
+            "presentacion": "2.5 lt",
+            "cantSucursalesDisponible": 6
+        },
+        {
+            "marca": "COCA COLA",
+            "id": "7790895006753",
+            "precioMax": 9.99,
+            "precioMin": 8.25,
+            "nombre": "Coca Cola 237 Cc",
+            "presentacion": "237.0 cc",
+            "cantSucursalesDisponible": 11
+        }
+    ],
+    "totalPagina": 10
+}
