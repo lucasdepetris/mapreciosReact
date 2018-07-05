@@ -8,8 +8,9 @@ export default class ListProducts extends Component{
     productos:[]
   }
 
-  _handleChange = (e) => {
-    
+  _handleClickProduct = (prodId) => {
+    console.log(prodId)
+    this.props.onResults(prodId)
   }
 
   _handleSubmit = (e) => {
@@ -24,8 +25,13 @@ export default class ListProducts extends Component{
             {
               productos.map(prod => {
                 return(
-                  <div key = {prod.id} className = 'ProductList-item'>
+                  <div 
+                    key = {prod.id} 
+                    className = 'ProductList-item' 
+                    onClick={() => this._handleClickProduct(prod.id)}>
+
                      <Product id={prod.id} nombre={prod.nombre} marca = {prod.marca}/>
+
                   </div>
                 )
               })

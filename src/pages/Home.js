@@ -7,7 +7,7 @@ import ListProducts from '../components/ListProducts'
 export default class Home extends Component{
   state = {
     productToSearch:{},
-    product:{}
+    productSelected:{}
   }
 
   _handleResults = (results,lat,lng) => {
@@ -20,12 +20,10 @@ export default class Home extends Component{
   }
 
   _handleProductSelected = (prod) => {
-    
-    this.setState({product:prod})
+    this.setState({productSelected:prod})
   }
 
   render(){
-    console.log(this.state.productToSearch)
     return (
       <div>
         <Header />
