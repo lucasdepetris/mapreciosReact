@@ -5,15 +5,33 @@ import SectionSearchProducts from '../components/SectionSearchProducts'
 import ListProducts from '../components/ListProducts'
 
 export default class Home extends Component{
-  
+  state = {
+    productToSearch:{},
+    product:{}
+  }
+
+  _handleResults = (results,lat,lng) => {
+    var pro = {
+      prod:results,
+      lat:lat,
+      lng:lng
+    }
+    this.setState({productToSearch:pro})
+  }
+
+  _handleProductSelected = (prod) => {
+    
+    this.setState({product:prod})
+  }
 
   render(){
+    console.log(this.state.productToSearch)
     return (
       <div>
         <Header />
         <SectionIntroduction />
-        <SectionSearchProducts/>
-        <ListProducts/>
+        <SectionSearchProducts onResults={this._handleResults}/>
+        <ListProducts productToSearch={this.state.productToSearch} onResults={this._handleProductSelected}/>
       </div>
     )
   }

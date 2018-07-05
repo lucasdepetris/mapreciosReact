@@ -10,11 +10,13 @@ export default class SectionSearchProducts extends Component{
   }
 
   _handleChange = (e) => {
-    
+    this.setState({producto:e.target.value})
   }
 
   _handleSubmit = (e) => {
-    
+    e.preventDefault()
+    const {producto,lat,lng} = this.state
+    this.props.onResults(producto,2,lng)
   }
 
   render(){
@@ -28,10 +30,10 @@ export default class SectionSearchProducts extends Component{
             </div>
             <div className="field">
                 <div className="control">
-                    <input className="input is-medium" type="text" placeholder="Buscar Productos"/>
+                    <input onChange={this._handleChange} className="input is-medium" type="text" placeholder="Buscar Productos"/>
                 </div>
             </div>
-            <a className="button is-info">Buscar</a>
+            <button className="button is-info">Buscar</button>
       </form>
 
       <div>
