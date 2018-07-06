@@ -40,3 +40,17 @@
   height: 40px;
   background-color: blanchedalmond;
 }
+.ProductList .media-content{
+  text-align: center;
+}
+.media-content figure{
+  margin: 0 auto;
+}
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .ProductList-item {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    text-align: center;
+  }
+
+}

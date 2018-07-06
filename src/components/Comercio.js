@@ -19,7 +19,11 @@ export default class Comercio extends Component{
               <div className="media">
                   <div className="media-content">
                     <figure className="image is-128x128">
-                    <img src={"https://imagenes.preciosclaros.gob.ar/comercios/"+comercioId+"-"+banderaId+".jpg"} alt={banderaDescripcion}/>
+                    <img 
+                      src={"https://imagenes.preciosclaros.gob.ar/comercios/"+comercioId+"-"+banderaId+".jpg"} 
+                      alt={banderaDescripcion}
+                      className="img-comercio"
+                      />
                     </figure>
                     {
                       precioLista !== '' ?
