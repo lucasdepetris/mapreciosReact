@@ -5,6 +5,8 @@ import Product from '../components/Product'
 import ListSucursales from '../components/ListSucursales'
 import DetailProduct from '../components/DetailProductSelected'
 import {SectionDetailProduct} from '../components/SectionDetailProduct'
+import {SectionProductosEncontrados} from '../components/SectionProductosEncontrados'
+import {ComerciosCercanos} from '../components/ComerciosCercanos'
 
 
 export default class ListProducts extends Component{
@@ -43,7 +45,9 @@ export default class ListProducts extends Component{
     }
 
     return(
+          productos.length > 1 ?
           <div>
+            <SectionProductosEncontrados />
             <div className = 'ProductList'>
               {
                 productos.map(prod => {
@@ -70,10 +74,14 @@ export default class ListProducts extends Component{
             }
             {
               sucursales.length > 1 ?
+              <div>
+              <ComerciosCercanos />
               <ListSucursales sucursales={sucursales} />
+              </div>
               :null
             }
           </div>
+          :null
     )
   }
 }
