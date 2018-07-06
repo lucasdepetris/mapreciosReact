@@ -7,14 +7,13 @@ export default class SectionSearchProducts extends Component{
 
   constructor(props) {
     super(props);
-    this.lat= "";  // I declare the variable here
-    this.lng= "";
-    this.producto="";
-  }
+    this.lat = "";
+    this.lng = "";
 
-  state = {
-    producto:{},
-    productToSearchExist:false
+    this.state = {
+      producto:{},
+      productToSearchExist:false
+    }
   }
 
   _handleUbicacion = (lat,lng) => {
@@ -22,15 +21,17 @@ export default class SectionSearchProducts extends Component{
     this.lng = lng;
   }
 
+  _handleChange = (e) => {
+    this.setState({producto:{producto:e.target.value}})
+  }
   _handleSubmit = (e) => {
     e.preventDefault()
-    this.producto = e.target.Producto.value
-    console.log(this.lat,this.lng,this.producto)
-    this.setState({producto:{lat:this.lat,lng:this.lng,producto:this.producto},productToSearchExist:true})
+    this.setState({producto:{lat:this.lat,lng:this.lng,producto:e.target.Producto.value},productToSearchExist:true})
+    console.log(this.state.producto)
   }
 
   render(){
-    console.log(this.state.producto)
+    
     return(
     <div className = "Search-Products">
       <form onSubmit = {this._handleSubmit}>
@@ -46,10 +47,15 @@ export default class SectionSearchProducts extends Component{
                       type="text" 
                       placeholder="Buscar Productos"
                       name="Producto"
+                      onChange={this._handleChange}
                       />
                 </div>
             </div>
-            <button className="button is-info">Buscar</button>
+            <button  
+              disabled={!this.state.producto.producto && !this.state.producto.lat } 
+              className="button is-info">
+              Buscar
+            </button>
       </form>
 
       {this.state.productToSearchExist ?

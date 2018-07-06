@@ -8,7 +8,7 @@ export default class Comercio extends Component{
     banderaDescripcion:PropTypes.string,
     localidad:PropTypes.string,
     direccion:PropTypes.string,
-    precioLista:PropTypes.number
+    precioLista:PropTypes.string
   }
   
   render(){
@@ -21,7 +21,11 @@ export default class Comercio extends Component{
                     <figure className="image is-128x128">
                     <img src={"https://imagenes.preciosclaros.gob.ar/comercios/"+comercioId+"-"+banderaId+".jpg"} alt={banderaDescripcion}/>
                     </figure>
-                    <p className="title is-4">{precioLista}</p>
+                    {
+                      precioLista !== '' ?
+                      <p className="title is-4">{precioLista}</p>
+                      :<p className="title is-6">Precio no disponible.</p>
+                    }
                     <p className="subtitle is-6">{distanciaDescripcion}</p>
                     <p className="subtitle is-6">{banderaDescripcion}</p>
                     <p className="subtitle is-6">{localidad}</p>

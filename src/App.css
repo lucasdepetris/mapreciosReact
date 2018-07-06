@@ -20,12 +20,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 16px;
+  overflow: auto;
+  height: 20%;
 }
 
 .ProductList-item{
   transition: all 0.2s;
   margin-bottom: 24px;
-  width: 25%;
+  width: 15%;
 }
 
 .ProductList-item:hover{

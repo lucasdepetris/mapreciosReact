@@ -23,10 +23,6 @@ export default class ListSucursales extends Component{
   
     render(){
       
-      if(this.state.isLoading){
-        return <div>Loading..</div>
-      }
-  
       return(
             <div>
               <div className = 'ProductList'>

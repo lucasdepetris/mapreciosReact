@@ -19,7 +19,7 @@ export default class Product extends Component{
                     <figure className="image is-128x128">
                     <img src={"https://imagenes.preciosclaros.gob.ar/productos/"+id+".jpg"} alt={nombre}/>
                     </figure>
-                    <p className="title is-4">{nombre}</p>
+                    <p className="title is-6">{nombre}</p>
                     <p className="subtitle is-6">{marca}</p>
                     <p className="subtitle is-6">{id}</p>
                   </div>

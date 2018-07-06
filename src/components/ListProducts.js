@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Productos from '../mocks/productos.json'
 import ProductosDetalles from '../mocks/productoById.json'
-import Product from '../components/Comercio'
+import Product from '../components/Product'
 import ListSucursales from '../components/ListSucursales'
+import DetailProduct from '../components/DetailProductSelected'
+import {SectionDetailProduct} from '../components/SectionDetailProduct'
 
 
 export default class ListProducts extends Component{
@@ -35,7 +37,7 @@ export default class ListProducts extends Component{
   }
 
   _getProductoDetallesById = (id) => {
-    this.setState({producto:ProductosDetalles.producto,sucursales:ProductosDetalles.sucursales})
+    this.setState({producto:ProductosDetalles.producto,sucursales:ProductosDetalles.sucursales,isLoading:false})
   }
 
   render(){
@@ -63,7 +65,14 @@ export default class ListProducts extends Component{
                 })
               }
             </div>
-            <div className="separador-Productos-DetalleProducto"></div>
+            {
+              producto.id ?
+              <div>
+              <SectionDetailProduct />
+              <DetailProduct producto={producto}/>
+              </div>
+              :null
+            }
             {
               sucursales.length > 1 ?
               <ListSucursales sucursales={sucursales} />
