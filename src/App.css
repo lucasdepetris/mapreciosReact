@@ -28,6 +28,7 @@
   transition: all 0.2s;
   margin-bottom: 24px;
   width: 15%;
+  margin: 0 auto;
 }
 
 .ProductList-item:hover{
@@ -47,10 +48,15 @@
   margin: 0 auto;
 }
 /* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 1200px) {
+  .ProductList-item {
+    width: 30%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+}
 @media screen and (max-width: 800px) {
   .ProductList-item {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    text-align: center;
   }
 
 }
