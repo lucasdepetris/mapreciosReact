@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 import PlacesAutocomplete from 'react-places-autocomplete';
  
 import {
@@ -7,7 +7,6 @@ import {
     getLatLng,
   } from 'react-places-autocomplete';
 
-const MY_API_KEY = "AIzaSyCt8ZWpFeRniRAWxm_zb2XWCaNYcpiGri0" // fake
 
 export default class InputUbicacion extends React.Component {
     constructor(props) {

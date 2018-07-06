@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import Comercio from './Comercio';
 
 export default class ListSucursales extends Component{
-    constructor(props) {
-      super(props);
-      this.productoSelected = '';
-  
-    }
-  
+    
     state = {
       producto:{},
       productos:[],
@@ -17,10 +12,8 @@ export default class ListSucursales extends Component{
   
     componentDidMount(){
       console.log('1. componentDidMount')
-      
     }
     
-  
     render(){
       
       return(

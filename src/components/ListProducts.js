@@ -8,12 +8,7 @@ import {SectionDetailProduct} from '../components/SectionDetailProduct'
 
 
 export default class ListProducts extends Component{
-  constructor(props) {
-    super(props);
-    this.productoSelected = '';
-
-  }
-
+  
   state = {
     producto:{},
     productos:[],

@@ -8,7 +8,7 @@ export default class Comercio extends Component{
     banderaDescripcion:PropTypes.string,
     localidad:PropTypes.string,
     direccion:PropTypes.string,
-    precioLista:PropTypes.string
+    precioLista:PropTypes.number
   }
   
   render(){
