@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Productos from '../mocks/productos.json'
 import ProductosDetalles from '../mocks/productoById.json'
-import Product from '../components/Product'
+import Product from '../components/Comercio'
+import ListSucursales from '../components/ListSucursales'
 
 
 export default class ListProducts extends Component{
@@ -63,9 +64,11 @@ export default class ListProducts extends Component{
               }
             </div>
             <div className="separador-Productos-DetalleProducto"></div>
-            <div>
-              Detalles Producto Y comercios
-            </div>
+            {
+              sucursales.length > 1 ?
+              <ListSucursales sucursales={sucursales} />
+              :null
+            }
           </div>
     )
   }
