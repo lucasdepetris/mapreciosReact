@@ -7,7 +7,7 @@ import DetailProduct from '../components/DetailProductSelected'
 import {SectionDetailProduct} from '../components/SectionDetailProduct'
 import {SectionProductosEncontrados} from '../components/SectionProductosEncontrados'
 import {ComerciosCercanos} from '../components/ComerciosCercanos'
-
+import scrollToComponent from 'react-scroll-to-component';
 
 export default class ListProducts extends Component{
   
@@ -25,6 +25,16 @@ export default class ListProducts extends Component{
   }
   _getProductosByString = (producto) => {
     this.setState({productos:Productos.productos,isLoading:false})
+    var element = document.getElementsByName('productos')
+    console.log(element)
+    setTimeout(function () {
+      //window.scrollTo(element[0].offsetLeft, element[0].offsetTop-200);
+      scrollToComponent(element[0], {
+        offset: 0,
+        align: 'top',
+        duration: 1500
+    });
+    },2);
   }
 
   _handleClickProduct = (prodId) => {
@@ -35,6 +45,19 @@ export default class ListProducts extends Component{
 
   _getProductoDetallesById = (id) => {
     this.setState({producto:ProductosDetalles.producto,sucursales:ProductosDetalles.sucursales,isLoading:false})
+    var element = document.getElementsByName('detailProduct')
+    console.log(element)
+    setTimeout(function () {
+      scrollToComponent(element[0], {
+        offset: 0,
+        align: 'top',
+        duration: 1500
+    });
+    },2);
+  }
+
+  componentWillUnmount(){
+    clearTimeout()
   }
 
   render(){
@@ -46,7 +69,7 @@ export default class ListProducts extends Component{
 
     return(
           productos.length > 1 ?
-          <div>
+          <div name="productos">
             <SectionProductosEncontrados />
             <div className = 'ProductList'>
               {
@@ -66,7 +89,7 @@ export default class ListProducts extends Component{
             </div>
             {
               producto.id ?
-              <div>
+              <div name="detailProduct">
               <SectionDetailProduct />
               <DetailProduct producto={producto}/>
               </div>
