@@ -9,6 +9,10 @@ import {SectionProductosEncontrados} from '../components/SectionProductosEncontr
 import {ComerciosCercanos} from '../components/ComerciosCercanos'
 import scrollToComponent from 'react-scroll-to-component';
 
+import axios from 'axios';
+
+var reqCancelRequest = axios.CancelToken.source();
+
 export default class ListProducts extends Component{
   
   state = {
@@ -20,21 +24,40 @@ export default class ListProducts extends Component{
 
   componentDidMount(){
     console.log('1. componentDidMount')
+    reqCancelRequest = axios.CancelToken.source();
     console.log(this.props.productToSearch)
     this._getProductosByString(this.props.productToSearch)
   }
+  
   _getProductosByString = (producto) => {
-    this.setState({productos:Productos.productos,isLoading:false})
-    var element = document.getElementsByName('productos')
-    console.log(element)
-    setTimeout(function () {
+    axios.get(`https://d735s5r2zljbo.cloudfront.net/prod/productos?string=${producto.producto}&lat=${producto.lat}&lng=${producto.lng}&limit=10`, {
+      cancelToken: reqCancelRequest.token
+    })
+    .then(response => {
+      console.log(response)
+      this.setState({productos:response.data.productos,isLoading:false})
+      var element = document.getElementsByName('productos')
+      setTimeout(function () {
       //window.scrollTo(element[0].offsetLeft, element[0].offsetTop-200);
       scrollToComponent(element[0], {
-        offset: 0,
-        align: 'top',
-        duration: 1500
+          offset: 0,
+          align: 'top',
+          duration: 1500
+        });
+      },2);
+    })
+    .catch(thrown => {
+      if (axios.isCancel(thrown)) {
+        console.log('Request canceled', thrown.message);
+      } else {
+        // handle error
+        console.log(thrown)
+      
+      }
+      
     });
-    },2);
+  
+    
   }
 
   _handleClickProduct = (prodId) => {
@@ -57,6 +80,10 @@ export default class ListProducts extends Component{
   }
 
   componentWillUnmount(){
+    console.log('componentWillUnmount')
+
+    reqCancelRequest.cancel('Operation canceled by the user.');
+    reqCancelRequest = null
     clearTimeout()
   }
 

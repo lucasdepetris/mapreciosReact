@@ -5,6 +5,10 @@ import ListProducts from './ListProducts'
 
 export default class SectionSearchProducts extends Component{
 
+  constructor(props){
+    super()
+    this.inputProducto = ''
+  }
   state = { producto: "",lat:"",lng:"", productToSearchExist: false }
 
   _handleUbicacion = (lati,lngi) => {
@@ -13,7 +17,7 @@ export default class SectionSearchProducts extends Component{
   }
 
   _handleChange = (e) => {
-    this.setState({producto:e.target.value})
+    this.setState({producto:e.target.value,productToSearchExist:false})
   }
   _handleSubmit = (e) => {
     e.preventDefault()
