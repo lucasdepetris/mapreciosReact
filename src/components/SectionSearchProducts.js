@@ -27,7 +27,7 @@ export default class SectionSearchProducts extends Component{
   }
   _handleSubmit = (e) => {
     e.preventDefault()
-    if(e.target.Producto.value !== '')
+    if(e.target.Producto.value !== '' && this.state.lat !== '')
     {
       this.setState({producto:e.target.Producto.value,lat:this.state.lat,lng:this.state.lng,productToSearchExist:true})
       console.log(this.state)
@@ -55,7 +55,7 @@ export default class SectionSearchProducts extends Component{
               <button className="delete" aria-label="delete"></button>
             </div>
             <div className="message-body">
-                Debes Ingresar un producto a buscar.
+                Debes ingresar tanto una ubicacion como un producto.
             </div>
           </article>
           </div>
