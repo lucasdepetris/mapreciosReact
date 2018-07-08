@@ -28,7 +28,7 @@ export default class Comercio extends Component{
                     </figure>
                     {
                       precioLista !== '' ?
-                      <p className="title is-4">{precioLista}</p>
+                      <p className="title is-4">${precioLista}</p>
                       :<p className="title is-6">Precio no disponible.</p>
                     }
                     <p className="subtitle is-6">{distanciaDescripcion}</p>
