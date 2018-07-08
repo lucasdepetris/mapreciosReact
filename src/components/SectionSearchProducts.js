@@ -9,7 +9,13 @@ export default class SectionSearchProducts extends Component{
     super()
     this.inputProducto = ''
   }
-  state = { producto: "",lat:"",lng:"", productToSearchExist: false }
+  state = { 
+    producto: "",
+    lat:"",
+    lng:"",
+    productToSearchExist: false,
+    hasError:false
+  }
 
   _handleUbicacion = (lati,lngi) => {
     
@@ -21,14 +27,41 @@ export default class SectionSearchProducts extends Component{
   }
   _handleSubmit = (e) => {
     e.preventDefault()
-    this.setState({producto:e.target.Producto.value,lat:this.state.lat,lng:this.state.lng,productToSearchExist:true})
-    console.log(this.state)
+    if(e.target.Producto.value !== '')
+    {
+      this.setState({producto:e.target.Producto.value,lat:this.state.lat,lng:this.state.lng,productToSearchExist:true})
+      console.log(this.state)
+    }else{
+      this.setState({hasError:true})
+    }
+    
+  }
+  _handleModal = (e) =>{
+    this.setState({hasError:false})
   }
 
   render(){
     
     return(
     <div className = "Search-Products">
+      {
+      this.state.hasError ?
+      <div className="modal is-active">
+          <div className="modal-background" onClick={this._handleModal}></div>
+          <div className="modal-content">
+          <article className="message is-danger">
+            <div className="message-header">
+              <p>Ha ocurrido un problema</p>
+              <button className="delete" aria-label="delete"></button>
+            </div>
+            <div className="message-body">
+                Debes Ingresar un producto a buscar.
+            </div>
+          </article>
+          </div>
+          <button className="modal-close is-large" aria-label="close"></button>
+      </div>:null
+      }
       <form onSubmit = {this._handleSubmit}>
             <div className="field">
                 <div className="control">
@@ -47,7 +80,7 @@ export default class SectionSearchProducts extends Component{
                 </div>
             </div>
             <button  
-              disabled={!this.state.producto || !this.state.lat } 
+              //disabled={!this.state.producto || !this.state.lat } 
               className="button is-info">
               Buscar
             </button>
