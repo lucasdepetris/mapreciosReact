@@ -11,7 +11,11 @@ export default class DetailProductSelected extends Component{
               <article className="media">
                 <div className="media-left">
                   <figure className="image is-128x128">
-                    <img src={"https://imagenes.preciosclaros.gob.ar/productos/"+producto.id+".jpg"} alt={producto.nombre}/>
+                    <img 
+                      onError={(e)=>{e.target.src=require("../assets/images/imageNotFound.jpg")}}
+                      src={"https://imagenes.preciosclaros.gob.ar/productos/"+producto.id+".jpg"} 
+                      alt={producto.nombre}
+                      />
                   </figure>
                 </div>
                 <div className="media-content">

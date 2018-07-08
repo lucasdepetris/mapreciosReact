@@ -17,7 +17,8 @@ export default class Product extends Component{
               <div className="media">
                   <div className="media-content">
                     <figure className="image is-128x128">
-                    <img 
+                    <img
+                      onError={(e)=>{e.target.src=require("../assets/images/imageNotFound.jpg")}}
                       src={"https://imagenes.preciosclaros.gob.ar/productos/"+id+".jpg"} 
                       alt={nombre}
                       className="img-producto"

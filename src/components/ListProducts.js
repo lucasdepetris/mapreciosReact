@@ -55,9 +55,7 @@ export default class ListProducts extends Component{
       
       }
       
-    });
-  
-    
+    }); 
   }
 
   _handleClickProduct = (prodId) => {
@@ -67,16 +65,31 @@ export default class ListProducts extends Component{
   }
 
   _getProductoDetallesById = (id) => {
-    this.setState({producto:ProductosDetalles.producto,sucursales:ProductosDetalles.sucursales,isLoading:false})
-    var element = document.getElementsByName('detailProduct')
-    console.log(element)
-    setTimeout(function () {
-      scrollToComponent(element[0], {
-        offset: 0,
-        align: 'top',
-        duration: 1500
+    axios.get(`https://d735s5r2zljbo.cloudfront.net/prod/producto?id_producto=${id}&lat=${this.props.productToSearch.lat}&lng=${this.props.productToSearch.lng}&limit=10`, {
+      cancelToken: reqCancelRequest.token
+    })
+    .then(response => {
+      console.log(response)
+      this.setState({producto:response.data.producto,sucursales:response.data.sucursales,isLoading:false})
+      var element = document.getElementsByName('detailProduct')
+      console.log(element)
+      setTimeout(function () {
+        scrollToComponent(element[0], {
+          offset: 0,
+          align: 'top',
+          duration: 1500
+        });
+      },2);
+    })
+    .catch(thrown => {
+      if (axios.isCancel(thrown)) {
+        console.log('Request canceled', thrown.message);
+      } else {
+        // handle error
+        console.log(thrown)
+      
+      }
     });
-    },2);
   }
 
   componentWillUnmount(){
