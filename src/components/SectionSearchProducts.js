@@ -19,11 +19,11 @@ export default class SectionSearchProducts extends Component{
 
   _handleUbicacion = (lati,lngi) => {
     
-    this.setState({ lat:lati,lng:lngi })
+    this.setState({ lat:lati,lng:lngi})
   }
 
   _handleChange = (e) => {
-    this.setState({producto:e.target.value,productToSearchExist:false})
+    this.setState({producto:e.target.value})
   }
   _handleSubmit = (e) => {
     e.preventDefault()
@@ -40,6 +40,15 @@ export default class SectionSearchProducts extends Component{
     this.setState({hasError:false})
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate')
+    if(nextState.hasError !== this.state.hasError || nextState.productToSearchExist){
+      return true;
+    }
+
+    return false;  
+  }
+
   render(){
     
     return(
@@ -52,14 +61,13 @@ export default class SectionSearchProducts extends Component{
           <article className="message is-danger">
             <div className="message-header">
               <p>Ha ocurrido un problema</p>
-              <button className="delete" aria-label="delete"></button>
+              <button className="delete" aria-label="delete" onClick={this._handleModal}></button>
             </div>
             <div className="message-body">
                 Debes ingresar tanto una ubicacion como un producto.
             </div>
           </article>
           </div>
-          <button className="modal-close is-large" aria-label="close"></button>
       </div>:null
       }
       <form onSubmit = {this._handleSubmit}>
@@ -75,7 +83,7 @@ export default class SectionSearchProducts extends Component{
                       type="text" 
                       placeholder="Buscar Productos"
                       name="Producto"
-                      onChange={this._handleChange}
+                      
                       />
                 </div>
             </div>

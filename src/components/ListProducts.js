@@ -28,8 +28,28 @@ export default class ListProducts extends Component{
     console.log(this.props.productToSearch)
     this._getProductosByString(this.props.productToSearch)
   }
-  
+
+  componentWillReceiveProps(nextProps){
+      if(nextProps.productToSearch.producto !== this.props.productToSearch.producto 
+        || nextProps.productToSearch.lat !== this.props.productToSearch.lat 
+        || nextProps.productToSearch.lng !== this.props.productToSearch.lng){
+        console.log('son distintos')
+        this.setState({isLoading:true})
+        this._getProductosByString(nextProps.productToSearch)
+      }
+    }
+
   _getProductosByString = (producto) => {
+    var element = document.getElementsByName('loading')
+      setTimeout(function () {
+      //window.scrollTo(element[0].offsetLeft, element[0].offsetTop-200);
+      scrollToComponent(element[0], {
+          offset: 1000,
+          align: 'top',
+          duration: 1500
+        });
+      },2);
+
     axios.get(`https://d735s5r2zljbo.cloudfront.net/prod/productos?string=${producto.producto}&lat=${producto.lat}&lng=${producto.lng}&limit=10`, {
       cancelToken: reqCancelRequest.token
     })
@@ -104,7 +124,16 @@ export default class ListProducts extends Component{
     const {productos,producto,sucursales} = this.state
     
     if(this.state.isLoading){
-      return <div>Loading..</div>
+      return (
+              <div name="loading">
+                <img
+                      onError={(e)=>{e.target.src=require("../assets/images/imageNotFound.jpg")}}
+                      src={require("../assets/images/cartShopping1.gif")} 
+                      alt='loading'
+                      className="img-loading"
+                      />
+              </div>
+            )
     }
 
     return(
