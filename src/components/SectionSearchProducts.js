@@ -14,12 +14,13 @@ export default class SectionSearchProducts extends Component{
     lat:"",
     lng:"",
     productToSearchExist: false,
-    hasError:false
+    hasError:false,
+    clickBuscar:false
   }
 
   _handleUbicacion = (lati,lngi) => {
     
-    this.setState({ lat:lati,lng:lngi})
+    this.setState({ lat:lati,lng:lngi,clickBuscar:false})
   }
 
   _handleChange = (e) => {
@@ -27,6 +28,7 @@ export default class SectionSearchProducts extends Component{
   }
   _handleSubmit = (e) => {
     e.preventDefault()
+    this.setState({clickBuscar:true})
     if(e.target.Producto.value !== '' && this.state.lat !== '')
     {
       this.setState({producto:e.target.Producto.value,lat:this.state.lat,lng:this.state.lng,productToSearchExist:true})
@@ -42,7 +44,7 @@ export default class SectionSearchProducts extends Component{
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate')
-    if(nextState.hasError !== this.state.hasError || nextState.productToSearchExist){
+    if(nextState.hasError !== this.state.hasError || (nextState.productToSearchExist && nextState.clickBuscar)){
       return true;
     }
 

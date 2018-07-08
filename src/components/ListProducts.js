@@ -8,6 +8,7 @@ import {SectionDetailProduct} from '../components/SectionDetailProduct'
 import {SectionProductosEncontrados} from '../components/SectionProductosEncontrados'
 import {ComerciosCercanos} from '../components/ComerciosCercanos'
 import scrollToComponent from 'react-scroll-to-component';
+import {SectionProductsNotFound} from '../components/SectionProductsNotFound'
 
 import axios from 'axios';
 
@@ -32,10 +33,14 @@ export default class ListProducts extends Component{
   componentWillReceiveProps(nextProps){
       if(nextProps.productToSearch.producto !== this.props.productToSearch.producto 
         || nextProps.productToSearch.lat !== this.props.productToSearch.lat 
-        || nextProps.productToSearch.lng !== this.props.productToSearch.lng){
+        || nextProps.productToSearch.lng !== this.props.productToSearch.lng ){
+
         console.log('son distintos')
-        this.setState({isLoading:true})
-        this._getProductosByString(nextProps.productToSearch)
+        if(nextProps.productToSearch.clickBuscar){
+          this.setState({isLoading:true})
+          this._getProductosByString(nextProps.productToSearch)
+        }
+        
       }
     }
 
@@ -173,7 +178,12 @@ export default class ListProducts extends Component{
               :null
             }
           </div>
-          :null
+          :<div name="productos">
+              <SectionProductsNotFound />
+              <div className="ProductList contNotFound">
+                <button className="button is-info retry">Reintentar</button>
+              </div>
+          </div>
     )
   }
 }

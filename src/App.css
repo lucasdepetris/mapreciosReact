@@ -23,7 +23,10 @@
   overflow: auto;
   height: 20%;
 }
-
+.retry{
+  display: block;
+  margin: 0 auto;
+}
 .ProductList-item{
   transition: all 0.2s;
   margin-bottom: 24px;
