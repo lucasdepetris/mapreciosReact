@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.contHeader{
+  background-image: url('./assets/images/gondolas.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .Search-Products{
   text-align: center;
 }
@@ -50,6 +55,43 @@
 .media-content figure{
   margin: 0 auto;
 }
+
+
+.quote {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 50px 0;
+  padding: 20% 20px;
+  text-align: center;
+  background: #41ade5;
+  position: relative;
+  z-index: 1;
+}
+  .quote::before,
+  .quote::after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; 
+  }
+
+  .quote::before {
+    top: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 100% 0;
+  }
+  
+  .quote::after {
+    bottom: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
+  }
+
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 1200px) {
   .ProductList-item {
