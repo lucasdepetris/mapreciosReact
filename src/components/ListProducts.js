@@ -53,7 +53,7 @@ export default class ListProducts extends Component{
           align: 'top',
           duration: 1500
         });
-      },2);
+      },100);
 
     axios.get(`https://d735s5r2zljbo.cloudfront.net/prod/productos?string=${producto.producto}&lat=${producto.lat}&lng=${producto.lng}&limit=10`, {
       cancelToken: reqCancelRequest.token
