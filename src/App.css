@@ -1,10 +1,11 @@
 .App {
   text-align: center;
+  background-color: #F8FFE5;
 }
 .contHeader{
-  background-image: url('./assets/images/gondolas.jpg');
+  /*background-image: url('./assets/images/gondolas.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 .Search-Products{
   text-align: center;
@@ -37,6 +38,7 @@
   margin-bottom: 24px;
   width: 15%;
   margin: 0 auto;
+  background-color: white;
 }
 
 .ProductList-item:hover{
@@ -63,7 +65,7 @@
   margin: 50px 0;
   padding: 20% 20px;
   text-align: center;
-  background: #41ade5;
+  background: #06D6A0;
   position: relative;
   z-index: 1;
 }
@@ -95,12 +97,18 @@
 .circleBase{
     border-radius: 50%;
 }
-
-.contProductSection{
+.contDetailProduct{
+  background-color: #00d1b2;
+}
+.contProductSection , .contHeader{
   padding: 20% 20px;
   background-color: #00d1b2;
   -webkit-clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
   clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
+}
+
+html{
+  background-color: #F8FFE5;
 }
 
 /* Use a media query to add a breakpoint at 800px: */
