@@ -67,8 +67,8 @@
   position: relative;
   z-index: 1;
 }
-  .quote::before,
-  .quote::after {
+.quote::before,
+.quote::after {
     background: inherit;
     content: '';
     display: block;
@@ -80,17 +80,28 @@
     -webkit-backface-visibility: hidden; 
   }
 
-  .quote::before {
+.quote::before{
     top: 0;
     transform: skewY(1.5deg);
     transform-origin: 100% 0;
   }
   
-  .quote::after {
+.quote::after{
     bottom: 0;
     transform: skewY(-1.5deg);
     transform-origin: 100%;
   }
+
+.circleBase{
+    border-radius: 50%;
+}
+
+.contProductSection{
+  padding: 20% 20px;
+  background-color: #00d1b2;
+  -webkit-clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
+  clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
+}
 
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 1200px) {

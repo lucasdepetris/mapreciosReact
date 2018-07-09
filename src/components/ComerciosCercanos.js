@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const ComerciosCercanos = () => (
-    <section className="hero has-background-white-ter">
+    <section className="hero has-background-white-ter contComercios">
         <div className="hero-body">
             <div className="container">
             <h1 className="title">

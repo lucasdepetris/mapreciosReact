@@ -60,7 +60,7 @@ export default class ListProducts extends Component{
     })
     .then(response => {
       console.log(response)
-      this.setState({productos:response.data.productos,isLoading:false})
+      this.setState({productos:response.data.productos,producto:{},sucursales:[],isLoading:false})
       var element = document.getElementsByName('productos')
       setTimeout(function () {
       //window.scrollTo(element[0].offsetLeft, element[0].offsetTop-200);
@@ -86,10 +86,21 @@ export default class ListProducts extends Component{
   _handleClickProduct = (prodId) => {
     console.log(prodId)
     this.productoSelected = prodId
+    this.setState({isLoading:true})
     this._getProductoDetallesById(prodId)
   }
 
   _getProductoDetallesById = (id) => {
+    var element = document.getElementsByName('loading')
+      setTimeout(function () {
+      //window.scrollTo(element[0].offsetLeft, element[0].offsetTop-200);
+      scrollToComponent(element[0], {
+          offset: 1000,
+          align: 'top',
+          duration: 1500
+        });
+      },100);
+
     axios.get(`https://d735s5r2zljbo.cloudfront.net/prod/producto?id_producto=${id}&lat=${this.props.productToSearch.lat}&lng=${this.props.productToSearch.lng}&limit=10`, {
       cancelToken: reqCancelRequest.token
     })
@@ -151,7 +162,7 @@ export default class ListProducts extends Component{
                   return(
                     <div 
                       key = {prod.id} 
-                      className = 'ProductList-item' 
+                      className = 'ProductList-item circleBase' 
                       onClick={() => this._handleClickProduct(prod.id)}>
 
                       <Product id={prod.id} nombre={prod.nombre} marca = {prod.marca}/>
