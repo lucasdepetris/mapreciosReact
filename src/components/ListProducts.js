@@ -77,7 +77,7 @@ export default class ListProducts extends Component{
       } else {
         // handle error
         console.log(thrown)
-      
+        this.setState({productos:[],producto:{},sucursales:[],isLoading:false})
       }
       
     }); 
@@ -123,7 +123,7 @@ export default class ListProducts extends Component{
       } else {
         // handle error
         console.log(thrown)
-      
+        this.setState({productos:[],producto:{},sucursales:[],isLoading:false})
       }
     });
   }
