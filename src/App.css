@@ -99,6 +99,9 @@
 }
 .contDetailProduct{
   background: rgb(41, 75, 187);
+  padding: 20% 20px;
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 67%, 52% 80%, 0 69%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 67%, 52% 80%, 0 69%, 0 0);
 }
 .contProductSection , .contHeader{
   padding: 20% 20px;
