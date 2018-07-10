@@ -36,7 +36,7 @@
 .ProductList-item{
   transition: all 0.2s;
   margin-bottom: 24px;
-  width: 15%;
+  width: 30%;
   margin: 0 auto;
   background-color: white;
 }
