@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #F8FFE5;
+  background-color:white;
 }
 .contHeader{
   /*background-image: url('./assets/images/gondolas.jpg');
@@ -65,7 +65,7 @@
   margin: 50px 0;
   padding: 20% 20px;
   text-align: center;
-  background: #06D6A0;
+  background: rgb(41, 75, 187);
   position: relative;
   z-index: 1;
 }
@@ -98,17 +98,17 @@
     border-radius: 50%;
 }
 .contDetailProduct{
-  background-color: #00d1b2;
+  background: rgb(41, 75, 187);
 }
 .contProductSection , .contHeader{
   padding: 20% 20px;
-  background-color: #00d1b2;
+  background: rgb(41, 75, 187);
   -webkit-clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
   clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
 }
 
 html{
-  background-color: #F8FFE5;
+  background-color:white
 }
 
 /* Use a media query to add a breakpoint at 800px: */
