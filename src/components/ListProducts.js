@@ -60,7 +60,8 @@ export default class ListProducts extends Component{
     })
     .then(response => {
       console.log(response)
-      this.setState({productos:response.data.productos,producto:{},sucursales:[],isLoading:false})
+      var prods = response.data.productos ? response.data.productos : {}
+      this.setState({productos:prods,producto:{},sucursales:[],isLoading:false})
       var element = document.getElementsByName('productos')
       setTimeout(function () {
       //window.scrollTo(element[0].offsetLeft, element[0].offsetTop-200);
@@ -106,7 +107,9 @@ export default class ListProducts extends Component{
     })
     .then(response => {
       console.log(response)
-      this.setState({producto:response.data.producto,sucursales:response.data.sucursales,isLoading:false})
+      var prod = response.data.producto ? response.data.producto : {}
+      var sucurs = response.data.sucursales ? response.data.sucursales : []
+      this.setState({producto:prod,sucursales:sucurs,isLoading:false})
       var element = document.getElementsByName('detailProduct')
       console.log(element)
       setTimeout(function () {
