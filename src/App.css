@@ -115,6 +115,10 @@ html{
   background-color: white;
 }
 
+.boxA{
+  background-color: red;
+  width: 20%;
+}
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 1200px) {
   .ProductList-item {

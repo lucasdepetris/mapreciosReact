@@ -5,7 +5,7 @@ export const Header = () => (
          <h1 className="title has-text-white">
              Maprecios
         </h1>
-        <h2 className="subtitle has-text-white">
+        <h2 data-aos='fade-up' className="subtitle has-text-white">
             Compra mejor...
         </h2>
     </div>
