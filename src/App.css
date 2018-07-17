@@ -79,7 +79,8 @@
     position: absolute;
     right: 0;
     z-index: -1;
-    -webkit-backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; 
   }
 
 .quote::before{
