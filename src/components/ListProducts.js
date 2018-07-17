@@ -165,7 +165,10 @@ export default class ListProducts extends Component{
                   return(
                     <div 
                       key = {prod.id} 
-                      className = 'ProductList-item circleBase' 
+                      className = 'ProductList-item circleBase'
+                      data-aos="flip-left"
+                      data-aos-easing="ease-out-cubic"
+                      data-aos-duration="2000" 
                       onClick={() => this._handleClickProduct(prod.id)}>
 
                       <Product id={prod.id} nombre={prod.nombre} marca = {prod.marca}/>
