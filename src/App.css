@@ -170,6 +170,18 @@ html{
   background-color: red;
   width: 20%;
 }
+.contMaprecios img {
+  animation: square-to-circle 2s .5s infinite  ;
+}
+ 
+@keyframes square-to-circle {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 1200px) {
   .ProductList-item {
