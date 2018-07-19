@@ -2,6 +2,12 @@ import React from 'react'
 
 export const Header = () => (
     <div className="contHeader">
+        <div className="contMaprecios">
+            
+                <img src={require("../assets/images/mapreciosLogo.png")} alt="maprecios"/>
+                <strong>map</strong>recios
+            
+        </div>
         <div className="contImages">
             <div className="contBusca">
                 <img src={require("../assets/images/GPS.png")} alt="gps"/>
