@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InputUbicacion from './InputUbicacion'
 import ListProducts from './ListProducts'
-
+import {SectionIntroduction} from '../components/SectionIntroduction'
 
 export default class SectionSearchProducts extends Component{
 
@@ -72,30 +72,32 @@ export default class SectionSearchProducts extends Component{
           </div>
       </div>:null
       }
-      <form onSubmit = {this._handleSubmit}>
-            <div className="field">
-                <div className="control">
-                    <InputUbicacion onResults={this._handleUbicacion} />
-                </div>
-            </div>
-            <div className="field">
-                <div className="control">
-                    <input  
-                      className="input is-medium" 
-                      type="text" 
-                      placeholder="Buscar Productos"
-                      name="Producto"
-                      
-                      />
-                </div>
-            </div>
-            <button  
-              //disabled={!this.state.producto || !this.state.lat } 
-              className="button is-info">
-              Buscar
-            </button>
-      </form>
-
+      <div className="contBuscador">
+        <SectionIntroduction />
+        <form onSubmit = {this._handleSubmit}>
+              <div className="field">
+                  <div className="control">
+                      <InputUbicacion onResults={this._handleUbicacion} />
+                  </div>
+              </div>
+              <div className="field">
+                  <div className="control">
+                      <input  
+                        className="input is-medium" 
+                        type="text" 
+                        placeholder="Buscar Productos"
+                        name="Producto"
+                        
+                        />
+                  </div>
+              </div>
+              <button  
+                //disabled={!this.state.producto || !this.state.lat } 
+                className="button is-info">
+                Buscar
+              </button>
+        </form>
+      </div>
       {this.state.productToSearchExist ?
         <div>
         <ListProducts productToSearch={this.state}/>

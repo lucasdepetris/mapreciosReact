@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   background-color: white;
 }
 .contHeader{
@@ -10,7 +9,13 @@
 .Search-Products{
   text-align: center;
 }
-
+.contBuscador{
+  background-image: url('./assets/images/backgroundSearchProducts.png');
+   /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .control{
   width: 40%;
   float: none;
@@ -104,12 +109,38 @@
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 67%, 52% 80%, 0 69%, 0 0);
   clip-path: polygon(50% 0%, 100% 0, 100% 67%, 52% 80%, 0 69%, 0 0);
 }
-.contProductSection , .contHeader{
+.contProductSection {
   padding: 20% 20px;
   background-color: #799dee;;
   -webkit-clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
   clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
 }
+.contHeader{
+  width: 100%;
+  height: 600px;
+  background-image: url('./assets/images/backgroundContHeader.png');
+   /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contHeader div{
+  
+}
+.contImages{
+  position: absolute;
+  bottom: 10%;
+  display: block;
+  color: white;
+  
+}
+.contBusca , .contElegi, .contCompra{
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+  margin: 20px;
+}
+
 
 html{
   background-color: white;
