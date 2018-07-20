@@ -171,7 +171,7 @@ html{
   width: 20%;
 }
 .contMaprecios img {
-  animation: square-to-circle 2s .5s infinite  ;
+  animation: heartbeat 3s infinite;
 }
  
 @keyframes square-to-circle {
@@ -180,6 +180,34 @@ html{
   }
   to {
     transform:rotate(360deg);
+  }
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
   }
 }
 /* Use a media query to add a breakpoint at 800px: */
@@ -193,5 +221,7 @@ html{
   .ProductList-item {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
-
+  .control , .button{
+    width: 80%;
+  }
 }
