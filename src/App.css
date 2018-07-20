@@ -111,7 +111,7 @@
 }
 .contProductSection {
   padding: 20% 20px;
-  background-color: #799dee;;
+  background-color: #799dee;
   -webkit-clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
   clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
 }
@@ -209,6 +209,79 @@ html{
   {
     transform: scale( .75 );
   }
+}
+/* LOADING WEBSITE */
+
+body, html {
+  height: 100%;
+  text-align: center;
+}
+
+body {
+background-color: #799dee;;
+}
+
+.loaderWeb {
+display: inline-block;
+width: 30px;
+height: 30px;
+position: fixed;
+left: 50%;
+top: 50%;
+border: 4px solid #FBFBFB;
+animation: loader 4s infinite ease;
+}
+
+.loader-innerWeb {
+vertical-align: top;
+display: inline-block;
+width: 100%;
+background-color: #FBFBFB;
+animation: loader-inner 4s infinite ease-in;
+}
+
+@keyframes loader {
+0% {
+  transform: rotate(0deg);
+}
+
+25% {
+  transform: rotate(180deg);
+}
+
+50% {
+  transform: rotate(180deg);
+}
+
+75% {
+  transform: rotate(360deg);
+}
+
+100% {
+  transform: rotate(360deg);
+}
+}
+
+@keyframes loader-inner {
+0% {
+  height: 0%;
+}
+
+25% {
+  height: 0%;
+}
+
+50% {
+  height: 100%;
+}
+
+75% {
+  height: 100%;
+}
+
+100% {
+  height: 0%;
+}
 }
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 1200px) {
