@@ -9,15 +9,15 @@ export const Header = () => (
             
         </div>
         <div className="contImages">
-            <div className="contBusca">
+            <div className="contBusca" data-aos="fade-right">
                 <img src={require("../assets/images/GPS.png")} alt="gps"/>
                 <span>Buscá</span>
             </div>
-            <div className="contElegi"> 
+            <div className="contElegi" data-aos="fade-up"> 
                 <img src={require("../assets/images/MANITO.png")} alt="elegir" />
                 <span>Elegí</span>
             </div>
-            <div className="contCompra">
+            <div className="contCompra" data-aos="fade-left">
                 <img src={require("../assets/images/carrito.png")} alt="carrito" />
                 <span>Comprá</span>
             </div>
