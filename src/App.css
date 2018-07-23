@@ -111,9 +111,10 @@
 }
 .contProductSection {
   padding: 20% 20px;
-  background-color: #799dee;
-  -webkit-clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
-  clip-path: polygon(49% 13%, 100% 25%, 100% 76%, 55% 87%, 0 100%, 0 0);
+  padding-bottom: 30%;
+  background: linear-gradient(to top, #799dee , white);
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 67%, 0 59%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 67%, 0 59%, 0 0);
 }
 .contHeader{
   width: 100%;
